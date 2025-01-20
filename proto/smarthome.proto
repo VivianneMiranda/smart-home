@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package org.example.devices;
+
+// Mensagem representando um dispositivo
+message Device {
+  string id = 1;         // ID do dispositivo
+  string type = 2;       // Tipo do dispositivo (ex.: "Lampada", "TV")
+  string state = 3;      // Estado do dispositivo (ex.: "Ligado", "Desligado")
+}
+
+// Comando enviado do Gateway para os dispositivos
+message Command {
+  string device_id = 1;  // ID do dispositivo alvo
+  string action = 2;     // Ação (ex.: "Ligar", "Desligar")
+  string value = 3;      // Valor adicional (se necessário)
+}
+
+// Resposta dos dispositivos ao Gateway
+message Response {
+  string status = 1;     // Status do comando (ex.: "OK", "Erro")
+  string message = 2;    // Mensagem adicional
+}
+

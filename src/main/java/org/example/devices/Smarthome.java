@@ -51,7 +51,7 @@ public final class Smarthome {
 
     /**
      * <pre>
-     * Tipo do dispositivo (ex.: "Lampada", "TV")
+     * Tipo do dispositivo (ex.: "Lampada", "TV", "ArCondicionado")
      * </pre>
      *
      * <code>string type = 2;</code>
@@ -60,7 +60,7 @@ public final class Smarthome {
     java.lang.String getType();
     /**
      * <pre>
-     * Tipo do dispositivo (ex.: "Lampada", "TV")
+     * Tipo do dispositivo (ex.: "Lampada", "TV", "ArCondicionado")
      * </pre>
      *
      * <code>string type = 2;</code>
@@ -88,6 +88,126 @@ public final class Smarthome {
      */
     com.google.protobuf.ByteString
         getStateBytes();
+
+    /**
+     * <pre>
+     * Cor (para lâmpadas)
+     * </pre>
+     *
+     * <code>string color = 4;</code>
+     * @return The color.
+     */
+    java.lang.String getColor();
+    /**
+     * <pre>
+     * Cor (para lâmpadas)
+     * </pre>
+     *
+     * <code>string color = 4;</code>
+     * @return The bytes for color.
+     */
+    com.google.protobuf.ByteString
+        getColorBytes();
+
+    /**
+     * <pre>
+     * Brilho (0-100, para lâmpadas)
+     * </pre>
+     *
+     * <code>string brightness = 5;</code>
+     * @return The brightness.
+     */
+    java.lang.String getBrightness();
+    /**
+     * <pre>
+     * Brilho (0-100, para lâmpadas)
+     * </pre>
+     *
+     * <code>string brightness = 5;</code>
+     * @return The bytes for brightness.
+     */
+    com.google.protobuf.ByteString
+        getBrightnessBytes();
+
+    /**
+     * <pre>
+     * Canal (para TVs)
+     * </pre>
+     *
+     * <code>string channel = 6;</code>
+     * @return The channel.
+     */
+    java.lang.String getChannel();
+    /**
+     * <pre>
+     * Canal (para TVs)
+     * </pre>
+     *
+     * <code>string channel = 6;</code>
+     * @return The bytes for channel.
+     */
+    com.google.protobuf.ByteString
+        getChannelBytes();
+
+    /**
+     * <pre>
+     * Volume (0-100, para TVs)
+     * </pre>
+     *
+     * <code>string volume = 7;</code>
+     * @return The volume.
+     */
+    java.lang.String getVolume();
+    /**
+     * <pre>
+     * Volume (0-100, para TVs)
+     * </pre>
+     *
+     * <code>string volume = 7;</code>
+     * @return The bytes for volume.
+     */
+    com.google.protobuf.ByteString
+        getVolumeBytes();
+
+    /**
+     * <pre>
+     * Temperatura (para ar-condicionado)
+     * </pre>
+     *
+     * <code>string temperature = 8;</code>
+     * @return The temperature.
+     */
+    java.lang.String getTemperature();
+    /**
+     * <pre>
+     * Temperatura (para ar-condicionado)
+     * </pre>
+     *
+     * <code>string temperature = 8;</code>
+     * @return The bytes for temperature.
+     */
+    com.google.protobuf.ByteString
+        getTemperatureBytes();
+
+    /**
+     * <pre>
+     * Modo (Auto, Cooling, etc., para ar-condicionado)
+     * </pre>
+     *
+     * <code>string mode = 9;</code>
+     * @return The mode.
+     */
+    java.lang.String getMode();
+    /**
+     * <pre>
+     * Modo (Auto, Cooling, etc., para ar-condicionado)
+     * </pre>
+     *
+     * <code>string mode = 9;</code>
+     * @return The bytes for mode.
+     */
+    com.google.protobuf.ByteString
+        getModeBytes();
   }
   /**
    * <pre>
@@ -118,6 +238,12 @@ public final class Smarthome {
       id_ = "";
       type_ = "";
       state_ = "";
+      color_ = "";
+      brightness_ = "";
+      channel_ = "";
+      volume_ = "";
+      temperature_ = "";
+      mode_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -185,7 +311,7 @@ public final class Smarthome {
     private volatile java.lang.Object type_ = "";
     /**
      * <pre>
-     * Tipo do dispositivo (ex.: "Lampada", "TV")
+     * Tipo do dispositivo (ex.: "Lampada", "TV", "ArCondicionado")
      * </pre>
      *
      * <code>string type = 2;</code>
@@ -206,7 +332,7 @@ public final class Smarthome {
     }
     /**
      * <pre>
-     * Tipo do dispositivo (ex.: "Lampada", "TV")
+     * Tipo do dispositivo (ex.: "Lampada", "TV", "ArCondicionado")
      * </pre>
      *
      * <code>string type = 2;</code>
@@ -274,6 +400,288 @@ public final class Smarthome {
       }
     }
 
+    public static final int COLOR_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object color_ = "";
+    /**
+     * <pre>
+     * Cor (para lâmpadas)
+     * </pre>
+     *
+     * <code>string color = 4;</code>
+     * @return The color.
+     */
+    @java.lang.Override
+    public java.lang.String getColor() {
+      java.lang.Object ref = color_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        color_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Cor (para lâmpadas)
+     * </pre>
+     *
+     * <code>string color = 4;</code>
+     * @return The bytes for color.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getColorBytes() {
+      java.lang.Object ref = color_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        color_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BRIGHTNESS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object brightness_ = "";
+    /**
+     * <pre>
+     * Brilho (0-100, para lâmpadas)
+     * </pre>
+     *
+     * <code>string brightness = 5;</code>
+     * @return The brightness.
+     */
+    @java.lang.Override
+    public java.lang.String getBrightness() {
+      java.lang.Object ref = brightness_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        brightness_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Brilho (0-100, para lâmpadas)
+     * </pre>
+     *
+     * <code>string brightness = 5;</code>
+     * @return The bytes for brightness.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBrightnessBytes() {
+      java.lang.Object ref = brightness_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        brightness_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHANNEL_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object channel_ = "";
+    /**
+     * <pre>
+     * Canal (para TVs)
+     * </pre>
+     *
+     * <code>string channel = 6;</code>
+     * @return The channel.
+     */
+    @java.lang.Override
+    public java.lang.String getChannel() {
+      java.lang.Object ref = channel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        channel_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Canal (para TVs)
+     * </pre>
+     *
+     * <code>string channel = 6;</code>
+     * @return The bytes for channel.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChannelBytes() {
+      java.lang.Object ref = channel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        channel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VOLUME_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object volume_ = "";
+    /**
+     * <pre>
+     * Volume (0-100, para TVs)
+     * </pre>
+     *
+     * <code>string volume = 7;</code>
+     * @return The volume.
+     */
+    @java.lang.Override
+    public java.lang.String getVolume() {
+      java.lang.Object ref = volume_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        volume_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Volume (0-100, para TVs)
+     * </pre>
+     *
+     * <code>string volume = 7;</code>
+     * @return The bytes for volume.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVolumeBytes() {
+      java.lang.Object ref = volume_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        volume_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TEMPERATURE_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object temperature_ = "";
+    /**
+     * <pre>
+     * Temperatura (para ar-condicionado)
+     * </pre>
+     *
+     * <code>string temperature = 8;</code>
+     * @return The temperature.
+     */
+    @java.lang.Override
+    public java.lang.String getTemperature() {
+      java.lang.Object ref = temperature_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        temperature_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Temperatura (para ar-condicionado)
+     * </pre>
+     *
+     * <code>string temperature = 8;</code>
+     * @return The bytes for temperature.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTemperatureBytes() {
+      java.lang.Object ref = temperature_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        temperature_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MODE_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mode_ = "";
+    /**
+     * <pre>
+     * Modo (Auto, Cooling, etc., para ar-condicionado)
+     * </pre>
+     *
+     * <code>string mode = 9;</code>
+     * @return The mode.
+     */
+    @java.lang.Override
+    public java.lang.String getMode() {
+      java.lang.Object ref = mode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Modo (Auto, Cooling, etc., para ar-condicionado)
+     * </pre>
+     *
+     * <code>string mode = 9;</code>
+     * @return The bytes for mode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModeBytes() {
+      java.lang.Object ref = mode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -297,6 +705,24 @@ public final class Smarthome {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(state_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 3, state_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(color_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, color_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(brightness_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, brightness_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(channel_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, channel_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(volume_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, volume_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(temperature_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 8, temperature_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(mode_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 9, mode_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -314,6 +740,24 @@ public final class Smarthome {
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(state_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(3, state_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(color_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, color_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(brightness_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, brightness_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(channel_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, channel_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(volume_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, volume_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(temperature_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, temperature_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(mode_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(9, mode_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -336,6 +780,18 @@ public final class Smarthome {
           .equals(other.getType())) return false;
       if (!getState()
           .equals(other.getState())) return false;
+      if (!getColor()
+          .equals(other.getColor())) return false;
+      if (!getBrightness()
+          .equals(other.getBrightness())) return false;
+      if (!getChannel()
+          .equals(other.getChannel())) return false;
+      if (!getVolume()
+          .equals(other.getVolume())) return false;
+      if (!getTemperature()
+          .equals(other.getTemperature())) return false;
+      if (!getMode()
+          .equals(other.getMode())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -353,6 +809,18 @@ public final class Smarthome {
       hash = (53 * hash) + getType().hashCode();
       hash = (37 * hash) + STATE_FIELD_NUMBER;
       hash = (53 * hash) + getState().hashCode();
+      hash = (37 * hash) + COLOR_FIELD_NUMBER;
+      hash = (53 * hash) + getColor().hashCode();
+      hash = (37 * hash) + BRIGHTNESS_FIELD_NUMBER;
+      hash = (53 * hash) + getBrightness().hashCode();
+      hash = (37 * hash) + CHANNEL_FIELD_NUMBER;
+      hash = (53 * hash) + getChannel().hashCode();
+      hash = (37 * hash) + VOLUME_FIELD_NUMBER;
+      hash = (53 * hash) + getVolume().hashCode();
+      hash = (37 * hash) + TEMPERATURE_FIELD_NUMBER;
+      hash = (53 * hash) + getTemperature().hashCode();
+      hash = (37 * hash) + MODE_FIELD_NUMBER;
+      hash = (53 * hash) + getMode().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -491,6 +959,12 @@ public final class Smarthome {
         id_ = "";
         type_ = "";
         state_ = "";
+        color_ = "";
+        brightness_ = "";
+        channel_ = "";
+        volume_ = "";
+        temperature_ = "";
+        mode_ = "";
         return this;
       }
 
@@ -533,6 +1007,24 @@ public final class Smarthome {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.state_ = state_;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.color_ = color_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.brightness_ = brightness_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.channel_ = channel_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.volume_ = volume_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.temperature_ = temperature_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.mode_ = mode_;
+        }
       }
 
       @java.lang.Override
@@ -560,6 +1052,36 @@ public final class Smarthome {
         if (!other.getState().isEmpty()) {
           state_ = other.state_;
           bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getColor().isEmpty()) {
+          color_ = other.color_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getBrightness().isEmpty()) {
+          brightness_ = other.brightness_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getChannel().isEmpty()) {
+          channel_ = other.channel_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getVolume().isEmpty()) {
+          volume_ = other.volume_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getTemperature().isEmpty()) {
+          temperature_ = other.temperature_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (!other.getMode().isEmpty()) {
+          mode_ = other.mode_;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -603,6 +1125,36 @@ public final class Smarthome {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 34: {
+                color_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                brightness_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                channel_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                volume_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                temperature_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                mode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -715,7 +1267,7 @@ public final class Smarthome {
       private java.lang.Object type_ = "";
       /**
        * <pre>
-       * Tipo do dispositivo (ex.: "Lampada", "TV")
+       * Tipo do dispositivo (ex.: "Lampada", "TV", "ArCondicionado")
        * </pre>
        *
        * <code>string type = 2;</code>
@@ -735,7 +1287,7 @@ public final class Smarthome {
       }
       /**
        * <pre>
-       * Tipo do dispositivo (ex.: "Lampada", "TV")
+       * Tipo do dispositivo (ex.: "Lampada", "TV", "ArCondicionado")
        * </pre>
        *
        * <code>string type = 2;</code>
@@ -756,7 +1308,7 @@ public final class Smarthome {
       }
       /**
        * <pre>
-       * Tipo do dispositivo (ex.: "Lampada", "TV")
+       * Tipo do dispositivo (ex.: "Lampada", "TV", "ArCondicionado")
        * </pre>
        *
        * <code>string type = 2;</code>
@@ -773,7 +1325,7 @@ public final class Smarthome {
       }
       /**
        * <pre>
-       * Tipo do dispositivo (ex.: "Lampada", "TV")
+       * Tipo do dispositivo (ex.: "Lampada", "TV", "ArCondicionado")
        * </pre>
        *
        * <code>string type = 2;</code>
@@ -787,7 +1339,7 @@ public final class Smarthome {
       }
       /**
        * <pre>
-       * Tipo do dispositivo (ex.: "Lampada", "TV")
+       * Tipo do dispositivo (ex.: "Lampada", "TV", "ArCondicionado")
        * </pre>
        *
        * <code>string type = 2;</code>
@@ -892,6 +1444,558 @@ public final class Smarthome {
         checkByteStringIsUtf8(value);
         state_ = value;
         bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object color_ = "";
+      /**
+       * <pre>
+       * Cor (para lâmpadas)
+       * </pre>
+       *
+       * <code>string color = 4;</code>
+       * @return The color.
+       */
+      public java.lang.String getColor() {
+        java.lang.Object ref = color_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          color_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Cor (para lâmpadas)
+       * </pre>
+       *
+       * <code>string color = 4;</code>
+       * @return The bytes for color.
+       */
+      public com.google.protobuf.ByteString
+          getColorBytes() {
+        java.lang.Object ref = color_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          color_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Cor (para lâmpadas)
+       * </pre>
+       *
+       * <code>string color = 4;</code>
+       * @param value The color to set.
+       * @return This builder for chaining.
+       */
+      public Builder setColor(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        color_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cor (para lâmpadas)
+       * </pre>
+       *
+       * <code>string color = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearColor() {
+        color_ = getDefaultInstance().getColor();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cor (para lâmpadas)
+       * </pre>
+       *
+       * <code>string color = 4;</code>
+       * @param value The bytes for color to set.
+       * @return This builder for chaining.
+       */
+      public Builder setColorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        color_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object brightness_ = "";
+      /**
+       * <pre>
+       * Brilho (0-100, para lâmpadas)
+       * </pre>
+       *
+       * <code>string brightness = 5;</code>
+       * @return The brightness.
+       */
+      public java.lang.String getBrightness() {
+        java.lang.Object ref = brightness_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          brightness_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Brilho (0-100, para lâmpadas)
+       * </pre>
+       *
+       * <code>string brightness = 5;</code>
+       * @return The bytes for brightness.
+       */
+      public com.google.protobuf.ByteString
+          getBrightnessBytes() {
+        java.lang.Object ref = brightness_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          brightness_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Brilho (0-100, para lâmpadas)
+       * </pre>
+       *
+       * <code>string brightness = 5;</code>
+       * @param value The brightness to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBrightness(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        brightness_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Brilho (0-100, para lâmpadas)
+       * </pre>
+       *
+       * <code>string brightness = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBrightness() {
+        brightness_ = getDefaultInstance().getBrightness();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Brilho (0-100, para lâmpadas)
+       * </pre>
+       *
+       * <code>string brightness = 5;</code>
+       * @param value The bytes for brightness to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBrightnessBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        brightness_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object channel_ = "";
+      /**
+       * <pre>
+       * Canal (para TVs)
+       * </pre>
+       *
+       * <code>string channel = 6;</code>
+       * @return The channel.
+       */
+      public java.lang.String getChannel() {
+        java.lang.Object ref = channel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          channel_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Canal (para TVs)
+       * </pre>
+       *
+       * <code>string channel = 6;</code>
+       * @return The bytes for channel.
+       */
+      public com.google.protobuf.ByteString
+          getChannelBytes() {
+        java.lang.Object ref = channel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          channel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Canal (para TVs)
+       * </pre>
+       *
+       * <code>string channel = 6;</code>
+       * @param value The channel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannel(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        channel_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Canal (para TVs)
+       * </pre>
+       *
+       * <code>string channel = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChannel() {
+        channel_ = getDefaultInstance().getChannel();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Canal (para TVs)
+       * </pre>
+       *
+       * <code>string channel = 6;</code>
+       * @param value The bytes for channel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        channel_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object volume_ = "";
+      /**
+       * <pre>
+       * Volume (0-100, para TVs)
+       * </pre>
+       *
+       * <code>string volume = 7;</code>
+       * @return The volume.
+       */
+      public java.lang.String getVolume() {
+        java.lang.Object ref = volume_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          volume_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Volume (0-100, para TVs)
+       * </pre>
+       *
+       * <code>string volume = 7;</code>
+       * @return The bytes for volume.
+       */
+      public com.google.protobuf.ByteString
+          getVolumeBytes() {
+        java.lang.Object ref = volume_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          volume_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Volume (0-100, para TVs)
+       * </pre>
+       *
+       * <code>string volume = 7;</code>
+       * @param value The volume to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVolume(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        volume_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Volume (0-100, para TVs)
+       * </pre>
+       *
+       * <code>string volume = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVolume() {
+        volume_ = getDefaultInstance().getVolume();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Volume (0-100, para TVs)
+       * </pre>
+       *
+       * <code>string volume = 7;</code>
+       * @param value The bytes for volume to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVolumeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        volume_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object temperature_ = "";
+      /**
+       * <pre>
+       * Temperatura (para ar-condicionado)
+       * </pre>
+       *
+       * <code>string temperature = 8;</code>
+       * @return The temperature.
+       */
+      public java.lang.String getTemperature() {
+        java.lang.Object ref = temperature_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          temperature_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Temperatura (para ar-condicionado)
+       * </pre>
+       *
+       * <code>string temperature = 8;</code>
+       * @return The bytes for temperature.
+       */
+      public com.google.protobuf.ByteString
+          getTemperatureBytes() {
+        java.lang.Object ref = temperature_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          temperature_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Temperatura (para ar-condicionado)
+       * </pre>
+       *
+       * <code>string temperature = 8;</code>
+       * @param value The temperature to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTemperature(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        temperature_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Temperatura (para ar-condicionado)
+       * </pre>
+       *
+       * <code>string temperature = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTemperature() {
+        temperature_ = getDefaultInstance().getTemperature();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Temperatura (para ar-condicionado)
+       * </pre>
+       *
+       * <code>string temperature = 8;</code>
+       * @param value The bytes for temperature to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTemperatureBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        temperature_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object mode_ = "";
+      /**
+       * <pre>
+       * Modo (Auto, Cooling, etc., para ar-condicionado)
+       * </pre>
+       *
+       * <code>string mode = 9;</code>
+       * @return The mode.
+       */
+      public java.lang.String getMode() {
+        java.lang.Object ref = mode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Modo (Auto, Cooling, etc., para ar-condicionado)
+       * </pre>
+       *
+       * <code>string mode = 9;</code>
+       * @return The bytes for mode.
+       */
+      public com.google.protobuf.ByteString
+          getModeBytes() {
+        java.lang.Object ref = mode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Modo (Auto, Cooling, etc., para ar-condicionado)
+       * </pre>
+       *
+       * <code>string mode = 9;</code>
+       * @param value The mode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMode(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        mode_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Modo (Auto, Cooling, etc., para ar-condicionado)
+       * </pre>
+       *
+       * <code>string mode = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMode() {
+        mode_ = getDefaultInstance().getMode();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Modo (Auto, Cooling, etc., para ar-condicionado)
+       * </pre>
+       *
+       * <code>string mode = 9;</code>
+       * @param value The bytes for mode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        mode_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -1010,6 +2114,126 @@ public final class Smarthome {
      */
     com.google.protobuf.ByteString
         getValueBytes();
+
+    /**
+     * <pre>
+     * Cor (para lâmpadas)
+     * </pre>
+     *
+     * <code>string color = 4;</code>
+     * @return The color.
+     */
+    java.lang.String getColor();
+    /**
+     * <pre>
+     * Cor (para lâmpadas)
+     * </pre>
+     *
+     * <code>string color = 4;</code>
+     * @return The bytes for color.
+     */
+    com.google.protobuf.ByteString
+        getColorBytes();
+
+    /**
+     * <pre>
+     * Brilho (0-100, para lâmpadas)
+     * </pre>
+     *
+     * <code>string brightness = 5;</code>
+     * @return The brightness.
+     */
+    java.lang.String getBrightness();
+    /**
+     * <pre>
+     * Brilho (0-100, para lâmpadas)
+     * </pre>
+     *
+     * <code>string brightness = 5;</code>
+     * @return The bytes for brightness.
+     */
+    com.google.protobuf.ByteString
+        getBrightnessBytes();
+
+    /**
+     * <pre>
+     * Canal (para TVs)
+     * </pre>
+     *
+     * <code>string channel = 6;</code>
+     * @return The channel.
+     */
+    java.lang.String getChannel();
+    /**
+     * <pre>
+     * Canal (para TVs)
+     * </pre>
+     *
+     * <code>string channel = 6;</code>
+     * @return The bytes for channel.
+     */
+    com.google.protobuf.ByteString
+        getChannelBytes();
+
+    /**
+     * <pre>
+     * Volume (0-100, para TVs)
+     * </pre>
+     *
+     * <code>string volume = 7;</code>
+     * @return The volume.
+     */
+    java.lang.String getVolume();
+    /**
+     * <pre>
+     * Volume (0-100, para TVs)
+     * </pre>
+     *
+     * <code>string volume = 7;</code>
+     * @return The bytes for volume.
+     */
+    com.google.protobuf.ByteString
+        getVolumeBytes();
+
+    /**
+     * <pre>
+     * Temperatura (para ar-condicionado)
+     * </pre>
+     *
+     * <code>string temperature = 8;</code>
+     * @return The temperature.
+     */
+    java.lang.String getTemperature();
+    /**
+     * <pre>
+     * Temperatura (para ar-condicionado)
+     * </pre>
+     *
+     * <code>string temperature = 8;</code>
+     * @return The bytes for temperature.
+     */
+    com.google.protobuf.ByteString
+        getTemperatureBytes();
+
+    /**
+     * <pre>
+     * Modo (Auto, Cooling, etc., para ar-condicionado)
+     * </pre>
+     *
+     * <code>string mode = 9;</code>
+     * @return The mode.
+     */
+    java.lang.String getMode();
+    /**
+     * <pre>
+     * Modo (Auto, Cooling, etc., para ar-condicionado)
+     * </pre>
+     *
+     * <code>string mode = 9;</code>
+     * @return The bytes for mode.
+     */
+    com.google.protobuf.ByteString
+        getModeBytes();
   }
   /**
    * <pre>
@@ -1040,6 +2264,12 @@ public final class Smarthome {
       deviceId_ = "";
       action_ = "";
       value_ = "";
+      color_ = "";
+      brightness_ = "";
+      channel_ = "";
+      volume_ = "";
+      temperature_ = "";
+      mode_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -1196,6 +2426,288 @@ public final class Smarthome {
       }
     }
 
+    public static final int COLOR_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object color_ = "";
+    /**
+     * <pre>
+     * Cor (para lâmpadas)
+     * </pre>
+     *
+     * <code>string color = 4;</code>
+     * @return The color.
+     */
+    @java.lang.Override
+    public java.lang.String getColor() {
+      java.lang.Object ref = color_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        color_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Cor (para lâmpadas)
+     * </pre>
+     *
+     * <code>string color = 4;</code>
+     * @return The bytes for color.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getColorBytes() {
+      java.lang.Object ref = color_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        color_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BRIGHTNESS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object brightness_ = "";
+    /**
+     * <pre>
+     * Brilho (0-100, para lâmpadas)
+     * </pre>
+     *
+     * <code>string brightness = 5;</code>
+     * @return The brightness.
+     */
+    @java.lang.Override
+    public java.lang.String getBrightness() {
+      java.lang.Object ref = brightness_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        brightness_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Brilho (0-100, para lâmpadas)
+     * </pre>
+     *
+     * <code>string brightness = 5;</code>
+     * @return The bytes for brightness.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBrightnessBytes() {
+      java.lang.Object ref = brightness_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        brightness_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHANNEL_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object channel_ = "";
+    /**
+     * <pre>
+     * Canal (para TVs)
+     * </pre>
+     *
+     * <code>string channel = 6;</code>
+     * @return The channel.
+     */
+    @java.lang.Override
+    public java.lang.String getChannel() {
+      java.lang.Object ref = channel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        channel_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Canal (para TVs)
+     * </pre>
+     *
+     * <code>string channel = 6;</code>
+     * @return The bytes for channel.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChannelBytes() {
+      java.lang.Object ref = channel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        channel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VOLUME_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object volume_ = "";
+    /**
+     * <pre>
+     * Volume (0-100, para TVs)
+     * </pre>
+     *
+     * <code>string volume = 7;</code>
+     * @return The volume.
+     */
+    @java.lang.Override
+    public java.lang.String getVolume() {
+      java.lang.Object ref = volume_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        volume_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Volume (0-100, para TVs)
+     * </pre>
+     *
+     * <code>string volume = 7;</code>
+     * @return The bytes for volume.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVolumeBytes() {
+      java.lang.Object ref = volume_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        volume_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TEMPERATURE_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object temperature_ = "";
+    /**
+     * <pre>
+     * Temperatura (para ar-condicionado)
+     * </pre>
+     *
+     * <code>string temperature = 8;</code>
+     * @return The temperature.
+     */
+    @java.lang.Override
+    public java.lang.String getTemperature() {
+      java.lang.Object ref = temperature_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        temperature_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Temperatura (para ar-condicionado)
+     * </pre>
+     *
+     * <code>string temperature = 8;</code>
+     * @return The bytes for temperature.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTemperatureBytes() {
+      java.lang.Object ref = temperature_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        temperature_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MODE_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mode_ = "";
+    /**
+     * <pre>
+     * Modo (Auto, Cooling, etc., para ar-condicionado)
+     * </pre>
+     *
+     * <code>string mode = 9;</code>
+     * @return The mode.
+     */
+    @java.lang.Override
+    public java.lang.String getMode() {
+      java.lang.Object ref = mode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Modo (Auto, Cooling, etc., para ar-condicionado)
+     * </pre>
+     *
+     * <code>string mode = 9;</code>
+     * @return The bytes for mode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModeBytes() {
+      java.lang.Object ref = mode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1219,6 +2731,24 @@ public final class Smarthome {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 3, value_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(color_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, color_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(brightness_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, brightness_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(channel_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, channel_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(volume_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, volume_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(temperature_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 8, temperature_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(mode_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 9, mode_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1236,6 +2766,24 @@ public final class Smarthome {
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(3, value_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(color_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, color_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(brightness_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, brightness_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(channel_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, channel_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(volume_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, volume_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(temperature_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, temperature_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(mode_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(9, mode_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1258,6 +2806,18 @@ public final class Smarthome {
           .equals(other.getAction())) return false;
       if (!getValue()
           .equals(other.getValue())) return false;
+      if (!getColor()
+          .equals(other.getColor())) return false;
+      if (!getBrightness()
+          .equals(other.getBrightness())) return false;
+      if (!getChannel()
+          .equals(other.getChannel())) return false;
+      if (!getVolume()
+          .equals(other.getVolume())) return false;
+      if (!getTemperature()
+          .equals(other.getTemperature())) return false;
+      if (!getMode()
+          .equals(other.getMode())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1275,6 +2835,18 @@ public final class Smarthome {
       hash = (53 * hash) + getAction().hashCode();
       hash = (37 * hash) + VALUE_FIELD_NUMBER;
       hash = (53 * hash) + getValue().hashCode();
+      hash = (37 * hash) + COLOR_FIELD_NUMBER;
+      hash = (53 * hash) + getColor().hashCode();
+      hash = (37 * hash) + BRIGHTNESS_FIELD_NUMBER;
+      hash = (53 * hash) + getBrightness().hashCode();
+      hash = (37 * hash) + CHANNEL_FIELD_NUMBER;
+      hash = (53 * hash) + getChannel().hashCode();
+      hash = (37 * hash) + VOLUME_FIELD_NUMBER;
+      hash = (53 * hash) + getVolume().hashCode();
+      hash = (37 * hash) + TEMPERATURE_FIELD_NUMBER;
+      hash = (53 * hash) + getTemperature().hashCode();
+      hash = (37 * hash) + MODE_FIELD_NUMBER;
+      hash = (53 * hash) + getMode().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1413,6 +2985,12 @@ public final class Smarthome {
         deviceId_ = "";
         action_ = "";
         value_ = "";
+        color_ = "";
+        brightness_ = "";
+        channel_ = "";
+        volume_ = "";
+        temperature_ = "";
+        mode_ = "";
         return this;
       }
 
@@ -1455,6 +3033,24 @@ public final class Smarthome {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.value_ = value_;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.color_ = color_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.brightness_ = brightness_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.channel_ = channel_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.volume_ = volume_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.temperature_ = temperature_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.mode_ = mode_;
+        }
       }
 
       @java.lang.Override
@@ -1482,6 +3078,36 @@ public final class Smarthome {
         if (!other.getValue().isEmpty()) {
           value_ = other.value_;
           bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getColor().isEmpty()) {
+          color_ = other.color_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getBrightness().isEmpty()) {
+          brightness_ = other.brightness_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getChannel().isEmpty()) {
+          channel_ = other.channel_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getVolume().isEmpty()) {
+          volume_ = other.volume_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getTemperature().isEmpty()) {
+          temperature_ = other.temperature_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (!other.getMode().isEmpty()) {
+          mode_ = other.mode_;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1525,6 +3151,36 @@ public final class Smarthome {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 34: {
+                color_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                brightness_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                channel_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                volume_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                temperature_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                mode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1814,6 +3470,558 @@ public final class Smarthome {
         checkByteStringIsUtf8(value);
         value_ = value;
         bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object color_ = "";
+      /**
+       * <pre>
+       * Cor (para lâmpadas)
+       * </pre>
+       *
+       * <code>string color = 4;</code>
+       * @return The color.
+       */
+      public java.lang.String getColor() {
+        java.lang.Object ref = color_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          color_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Cor (para lâmpadas)
+       * </pre>
+       *
+       * <code>string color = 4;</code>
+       * @return The bytes for color.
+       */
+      public com.google.protobuf.ByteString
+          getColorBytes() {
+        java.lang.Object ref = color_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          color_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Cor (para lâmpadas)
+       * </pre>
+       *
+       * <code>string color = 4;</code>
+       * @param value The color to set.
+       * @return This builder for chaining.
+       */
+      public Builder setColor(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        color_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cor (para lâmpadas)
+       * </pre>
+       *
+       * <code>string color = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearColor() {
+        color_ = getDefaultInstance().getColor();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cor (para lâmpadas)
+       * </pre>
+       *
+       * <code>string color = 4;</code>
+       * @param value The bytes for color to set.
+       * @return This builder for chaining.
+       */
+      public Builder setColorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        color_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object brightness_ = "";
+      /**
+       * <pre>
+       * Brilho (0-100, para lâmpadas)
+       * </pre>
+       *
+       * <code>string brightness = 5;</code>
+       * @return The brightness.
+       */
+      public java.lang.String getBrightness() {
+        java.lang.Object ref = brightness_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          brightness_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Brilho (0-100, para lâmpadas)
+       * </pre>
+       *
+       * <code>string brightness = 5;</code>
+       * @return The bytes for brightness.
+       */
+      public com.google.protobuf.ByteString
+          getBrightnessBytes() {
+        java.lang.Object ref = brightness_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          brightness_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Brilho (0-100, para lâmpadas)
+       * </pre>
+       *
+       * <code>string brightness = 5;</code>
+       * @param value The brightness to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBrightness(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        brightness_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Brilho (0-100, para lâmpadas)
+       * </pre>
+       *
+       * <code>string brightness = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBrightness() {
+        brightness_ = getDefaultInstance().getBrightness();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Brilho (0-100, para lâmpadas)
+       * </pre>
+       *
+       * <code>string brightness = 5;</code>
+       * @param value The bytes for brightness to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBrightnessBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        brightness_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object channel_ = "";
+      /**
+       * <pre>
+       * Canal (para TVs)
+       * </pre>
+       *
+       * <code>string channel = 6;</code>
+       * @return The channel.
+       */
+      public java.lang.String getChannel() {
+        java.lang.Object ref = channel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          channel_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Canal (para TVs)
+       * </pre>
+       *
+       * <code>string channel = 6;</code>
+       * @return The bytes for channel.
+       */
+      public com.google.protobuf.ByteString
+          getChannelBytes() {
+        java.lang.Object ref = channel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          channel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Canal (para TVs)
+       * </pre>
+       *
+       * <code>string channel = 6;</code>
+       * @param value The channel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannel(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        channel_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Canal (para TVs)
+       * </pre>
+       *
+       * <code>string channel = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChannel() {
+        channel_ = getDefaultInstance().getChannel();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Canal (para TVs)
+       * </pre>
+       *
+       * <code>string channel = 6;</code>
+       * @param value The bytes for channel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        channel_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object volume_ = "";
+      /**
+       * <pre>
+       * Volume (0-100, para TVs)
+       * </pre>
+       *
+       * <code>string volume = 7;</code>
+       * @return The volume.
+       */
+      public java.lang.String getVolume() {
+        java.lang.Object ref = volume_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          volume_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Volume (0-100, para TVs)
+       * </pre>
+       *
+       * <code>string volume = 7;</code>
+       * @return The bytes for volume.
+       */
+      public com.google.protobuf.ByteString
+          getVolumeBytes() {
+        java.lang.Object ref = volume_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          volume_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Volume (0-100, para TVs)
+       * </pre>
+       *
+       * <code>string volume = 7;</code>
+       * @param value The volume to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVolume(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        volume_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Volume (0-100, para TVs)
+       * </pre>
+       *
+       * <code>string volume = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVolume() {
+        volume_ = getDefaultInstance().getVolume();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Volume (0-100, para TVs)
+       * </pre>
+       *
+       * <code>string volume = 7;</code>
+       * @param value The bytes for volume to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVolumeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        volume_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object temperature_ = "";
+      /**
+       * <pre>
+       * Temperatura (para ar-condicionado)
+       * </pre>
+       *
+       * <code>string temperature = 8;</code>
+       * @return The temperature.
+       */
+      public java.lang.String getTemperature() {
+        java.lang.Object ref = temperature_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          temperature_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Temperatura (para ar-condicionado)
+       * </pre>
+       *
+       * <code>string temperature = 8;</code>
+       * @return The bytes for temperature.
+       */
+      public com.google.protobuf.ByteString
+          getTemperatureBytes() {
+        java.lang.Object ref = temperature_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          temperature_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Temperatura (para ar-condicionado)
+       * </pre>
+       *
+       * <code>string temperature = 8;</code>
+       * @param value The temperature to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTemperature(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        temperature_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Temperatura (para ar-condicionado)
+       * </pre>
+       *
+       * <code>string temperature = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTemperature() {
+        temperature_ = getDefaultInstance().getTemperature();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Temperatura (para ar-condicionado)
+       * </pre>
+       *
+       * <code>string temperature = 8;</code>
+       * @param value The bytes for temperature to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTemperatureBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        temperature_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object mode_ = "";
+      /**
+       * <pre>
+       * Modo (Auto, Cooling, etc., para ar-condicionado)
+       * </pre>
+       *
+       * <code>string mode = 9;</code>
+       * @return The mode.
+       */
+      public java.lang.String getMode() {
+        java.lang.Object ref = mode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Modo (Auto, Cooling, etc., para ar-condicionado)
+       * </pre>
+       *
+       * <code>string mode = 9;</code>
+       * @return The bytes for mode.
+       */
+      public com.google.protobuf.ByteString
+          getModeBytes() {
+        java.lang.Object ref = mode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Modo (Auto, Cooling, etc., para ar-condicionado)
+       * </pre>
+       *
+       * <code>string mode = 9;</code>
+       * @param value The mode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMode(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        mode_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Modo (Auto, Cooling, etc., para ar-condicionado)
+       * </pre>
+       *
+       * <code>string mode = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMode() {
+        mode_ = getDefaultInstance().getMode();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Modo (Auto, Cooling, etc., para ar-condicionado)
+       * </pre>
+       *
+       * <code>string mode = 9;</code>
+       * @param value The bytes for mode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        mode_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -2632,11 +4840,16 @@ public final class Smarthome {
   static {
     java.lang.String[] descriptorData = {
       "\n\025proto/smarthome.proto\022\023org.example.dev" +
-      "ices\"1\n\006Device\022\n\n\002id\030\001 \001(\t\022\014\n\004type\030\002 \001(\t" +
-      "\022\r\n\005state\030\003 \001(\t\";\n\007Command\022\021\n\tdevice_id\030" +
-      "\001 \001(\t\022\016\n\006action\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\"+\n\010" +
-      "Response\022\016\n\006status\030\001 \001(\t\022\017\n\007message\030\002 \001(" +
-      "\tb\006proto3"
+      "ices\"\230\001\n\006Device\022\n\n\002id\030\001 \001(\t\022\014\n\004type\030\002 \001(" +
+      "\t\022\r\n\005state\030\003 \001(\t\022\r\n\005color\030\004 \001(\t\022\022\n\nbrigh" +
+      "tness\030\005 \001(\t\022\017\n\007channel\030\006 \001(\t\022\016\n\006volume\030\007" +
+      " \001(\t\022\023\n\013temperature\030\010 \001(\t\022\014\n\004mode\030\t \001(\t\"" +
+      "\242\001\n\007Command\022\021\n\tdevice_id\030\001 \001(\t\022\016\n\006action" +
+      "\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\022\r\n\005color\030\004 \001(\t\022\022\n\n" +
+      "brightness\030\005 \001(\t\022\017\n\007channel\030\006 \001(\t\022\016\n\006vol" +
+      "ume\030\007 \001(\t\022\023\n\013temperature\030\010 \001(\t\022\014\n\004mode\030\t" +
+      " \001(\t\"+\n\010Response\022\016\n\006status\030\001 \001(\t\022\017\n\007mess" +
+      "age\030\002 \001(\tb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2647,13 +4860,13 @@ public final class Smarthome {
     internal_static_org_example_devices_Device_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_devices_Device_descriptor,
-        new java.lang.String[] { "Id", "Type", "State", });
+        new java.lang.String[] { "Id", "Type", "State", "Color", "Brightness", "Channel", "Volume", "Temperature", "Mode", });
     internal_static_org_example_devices_Command_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_org_example_devices_Command_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_devices_Command_descriptor,
-        new java.lang.String[] { "DeviceId", "Action", "Value", });
+        new java.lang.String[] { "DeviceId", "Action", "Value", "Color", "Brightness", "Channel", "Volume", "Temperature", "Mode", });
     internal_static_org_example_devices_Response_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_org_example_devices_Response_fieldAccessorTable = new

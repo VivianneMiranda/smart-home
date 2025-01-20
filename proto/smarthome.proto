@@ -5,8 +5,14 @@ package org.example.devices;
 // Mensagem representando um dispositivo
 message Device {
   string id = 1;         // ID do dispositivo
-  string type = 2;       // Tipo do dispositivo (ex.: "Lampada", "TV")
+  string type = 2;       // Tipo do dispositivo (ex.: "Lampada", "TV", "ArCondicionado")
   string state = 3;      // Estado do dispositivo (ex.: "Ligado", "Desligado")
+  string color = 4;      // Cor (para lâmpadas)
+  string brightness = 5;  // Brilho (0-100, para lâmpadas)
+  string channel = 6;     // Canal (para TVs)
+  string volume = 7;      // Volume (0-100, para TVs)
+  string temperature = 8; // Temperatura (para ar-condicionado)
+  string mode = 9;       // Modo (Auto, Cooling, etc., para ar-condicionado)
 }
 
 // Comando enviado do Gateway para os dispositivos
@@ -14,6 +20,12 @@ message Command {
   string device_id = 1;  // ID do dispositivo alvo
   string action = 2;     // Ação (ex.: "Ligar", "Desligar")
   string value = 3;      // Valor adicional (se necessário)
+  string color = 4;      // Cor (para lâmpadas)
+  string brightness = 5;  // Brilho (0-100, para lâmpadas)
+  string channel = 6;     // Canal (para TVs)
+  string volume = 7;      // Volume (0-100, para TVs)
+  string temperature = 8; // Temperatura (para ar-condicionado)
+  string mode = 9;       // Modo (Auto, Cooling, etc., para ar-condicionado)
 }
 
 // Resposta dos dispositivos ao Gateway
@@ -21,4 +33,3 @@ message Response {
   string status = 1;     // Status do comando (ex.: "OK", "Erro")
   string message = 2;    // Mensagem adicional
 }
-

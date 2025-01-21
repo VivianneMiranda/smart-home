@@ -55,6 +55,21 @@ public class Gateway {
                                 response.getBytes(), response.length(), address, port
                         );
                         socket.send(responsePacket);
+                    }else if (message.startsWith("STATUSSENSOR")) {
+                        System.out.println("Received status sensor request. Sending response...");
+                        InetAddress address = packet.getAddress();
+                        int port = packet.getPort();
+
+                        String[] parts = message.split("_", 2);
+                        String sensorId = parts[1];
+
+                        Smarthome.Device device = devices.get(sensorId);
+                        String response = device.getState();
+                        DatagramPacket responsePacket = new DatagramPacket(
+                                response.getBytes(), response.length(), address, port
+                        );
+                        socket.send(responsePacket);
+
                     }else{
                         byte[] data = Arrays.copyOf(packet.getData(), packet.getLength());
                         System.out.println("Received data length: " + data.length);
@@ -181,7 +196,16 @@ public class Gateway {
                     deviceBuilder.setVolume("Volume: " + command.getVolume() + "%");
                 }
                 if (!command.getTemperature().isEmpty()) {
+                    String sensorId = command.getDeviceId() + "_sensor";
                     deviceBuilder.setTemperature("Temperature: " + command.getTemperature() + "°C");
+
+                    if (devices.containsKey(sensorId)) {
+                        Smarthome.Device sensor = devices.get(sensorId);
+                        Smarthome.Device.Builder sensorBuilder = sensor.toBuilder();
+                        sensorBuilder.setState(command.getTemperature());
+                        devices.put(sensorId, sensorBuilder.build());
+
+                    }
                 }
                 if (!command.getMode().isEmpty()) {
                     deviceBuilder.setMode("Mode: " + command.getMode());

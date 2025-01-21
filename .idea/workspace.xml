@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0336c3bc-73a8-4014-a596-adf73b522c2d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/devices/TemperatureSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/devices/TemperatureSensor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/gateway/Gateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/gateway/Gateway.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +65,7 @@
       <command value="protoc --java_out=src/main/java/org/example/devices proto/smarthome.proto" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Device Lamp">
+  <component name="RunManager" selected="Application.Client">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.client.Client" />
       <module name="smart-home" />
@@ -94,7 +96,7 @@
     <configuration name="Device TV" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.example.devices.Device" />
       <module name="smart-home" />
-      <option name="PROGRAM_PARAMETERS" value="tv1 tv ON" />
+      <option name="PROGRAM_PARAMETERS" value="air1 AIR ON" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -115,7 +117,7 @@
     <configuration name="TemperatureSensor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.devices.TemperatureSensor" />
       <module name="smart-home" />
-      <option name="PROGRAM_PARAMETERS" value="sensor1 Temperature 25C " />
+      <option name="PROGRAM_PARAMETERS" value="air1_sensor Temperature 25C " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.devices.*" />
@@ -137,8 +139,8 @@
       <list>
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.TemperatureSensor" />
-        <item itemvalue="Application.Device Lamp" />
         <item itemvalue="Application.Gateway" />
+        <item itemvalue="Application.Device Lamp" />
       </list>
     </recent_temporary>
   </component>
@@ -163,10 +165,24 @@
       <workItem from="1736989117472" duration="5092000" />
       <workItem from="1737339556954" duration="78000" />
       <workItem from="1737339787698" duration="2226000" />
+      <workItem from="1737411186277" duration="17040000" />
+      <workItem from="1737457474738" duration="3502000" />
+      <workItem from="1737463317796" duration="357000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
